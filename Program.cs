@@ -29,13 +29,29 @@
             Console.WriteLine($"The sum of all your numbers is {sum}");
 
             //Max number
-            Console.WriteLine($"The higher number in your list is {numbersEntered.Max()}");
+            int maxNumber = numbersEntered[0];
+            for (int i = 1; i < numbersEntered.Length; i++)
+            {
+                if (numbersEntered[i] > maxNumber)
+                {
+                    maxNumber = numbersEntered[i];
+                }
+            }
+            Console.WriteLine($"The higher number in your list is {maxNumber}");
 
             //Min number
-            Console.WriteLine($"The lower number in your list is {numbersEntered.Min()}");
+            int minNumber = numbersEntered[0];
+            for (int i = 1; i < numbersEntered.Length; i++)
+            {
+                if (numbersEntered[i] < minNumber)
+                {
+                    minNumber = numbersEntered[i];
+                }
+            }
+            Console.WriteLine($"The lower number in your list is {minNumber}");
 
             //average number
-            int averageNumber = sum / 10;
+            double averageNumber = sum / 10d;
             Console.WriteLine($"The average of your numbers is {averageNumber}");
         }
     }
